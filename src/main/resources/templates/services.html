@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - SCM</title>
+</head>
+<body>
+    <h1>This is services page</h1>
+    <hr>
+
+    <!-- Using fragment -->
+    <div th:replace="~{base :: parent(~{::.third_content})}">
+        <section id="main_content">
+            <h2>This is Dynamic services passed to base parent</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo qui alias totam quod ratione fugit
+                repudiandae excepturi nam officia repellendus.</p>
+            <button>Click on Dynamic Services</button>
+        </section>
+        <section id="second_content">
+            <h2>This is services second content</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo qui alias totam quod ratione fugit
+                repudiandae excepturi nam officia repellendus.</p>
+            <button>Buy Now</button>
+        </section>
+        <section class="third_content">
+            <h2>Hii, My name is Julias Biswas</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo qui alias totam quod ratione fugit
+                repudiandae excepturi nam officia repellendus.</p>
+            <button>See details</button>
+        </section>
+    </div>
+</body>
+</html>

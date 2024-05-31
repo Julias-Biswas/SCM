@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="parent(content, title)">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="parent(content, title, script)">
 
 <head>
     <meta charset="UTF-8">
@@ -18,6 +18,8 @@
 
     <!-- Flowbite JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+    <th:block data-th-replace="${script}"></th:block>
 </body>
 
 </html>

@@ -1,9 +1,23 @@
-<div class="parent-fragment" th:fragment="parent(content)">
-    <h1>This is parent fragment</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ipsa.</p>
-    <div th:replace="${content}"></div>
-</div>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="parent(content, title)">
 
-<div th:fragment="test">
-    <h1>This is testing fragment</h1>
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-th-replace="${title}">Base Page</title>
+
+    <!-- Tailwind File -->
+    <link rel="stylesheet" data-th-href="@{'/css/output.css'}" />
+
+    <!-- Flowbite CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <section data-th-replace="${content}"></section>
+
+    <!-- Flowbite JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+
+</html>
